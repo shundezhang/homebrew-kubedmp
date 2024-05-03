@@ -5,20 +5,20 @@
 class Kubedmp < Formula
   desc ""
   homepage "https://github.com/shundezhang/homebrew-kubedmp"
-  version "0.8.1"
+  version "0.8.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.1/kubedmp_0.8.1_darwin-arm64.tar.gz"
-      sha256 "b21afdceaf4ae6904fabd3d8945015a9d81ee3d5572c8c22c619c7a58003b7fb"
+    if Hardware::CPU.intel?
+      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.2/kubedmp_0.8.2_darwin-amd64.tar.gz"
+      sha256 "d2b5c30ce22480668a7db01a7d87239ac63be242602829f5a97586db4dbbff20"
 
       def install
         bin.install "kubedmp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.1/kubedmp_0.8.1_darwin-amd64.tar.gz"
-      sha256 "a3e96cab1893584b04ad5c3435fe02a3e5926b1241a736bd2809d739a9ff9277"
+    if Hardware::CPU.arm?
+      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.2/kubedmp_0.8.2_darwin-arm64.tar.gz"
+      sha256 "633fe4e246d6a90175e1e79de36c9f23e605752c07ca64b3833b118cb4c5a0b7"
 
       def install
         bin.install "kubedmp"
@@ -28,8 +28,8 @@ class Kubedmp < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.1/kubedmp_0.8.1_linux-amd64.tar.gz"
-      sha256 "68640e7cd1d813ad56e5fb91139c507b16727051ba11e5f585bf0de190bdfe82"
+      url "https://github.com/shundezhang/kubedmp/releases/download/0.8.2/kubedmp_0.8.2_linux-amd64.tar.gz"
+      sha256 "e2dd32465ec13cb5c70bef55ec7deff78401997b1bd2f1666d692ef3d9678fff"
 
       def install
         bin.install "kubedmp"
